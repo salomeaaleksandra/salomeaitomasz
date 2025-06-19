@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salomea & Tomasz – Ślub</title>
+
+  <!-- Bellefair font -->
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Ramka w rogu -->
+  <div class="corner-frame top-left"></div>
+
+  <!-- Imiona -->
+  <header>
+    <div class="diagonal-names">
+      <span class="name first-name">Salomea</span>
+      <span class="amp">&amp;</span>
+      <span class="name second-name">Tomasz</span>
+    </div>
+  </header>
+
+  <!-- Tekst pod imionami -->
+  <section class="intro">
+    <p class="subtitle">ROZPOCZNĄ WSPÓLNĄ DROGĘ ŻYCIA,<br>ZAWIERAJĄC ZWIĄZEK MAŁŻEŃSKI.</p>
+    <p class="date">30 MAJA 2026 ROKU O GODZ. 16:00</p>
+  </section>
+
+  <!-- Licznik -->
+  <section class="countdown">
+    <p class="countdown-label">Pozostało do ślubu:</p>
+    <div class="countdown-boxes">
+      <div class="countdown-item">
+        <div id="days" class="countdown-value">00</div>
+        <div class="countdown-label">DNI</div>
+      </div>
+      <div class="countdown-item">
+        <div id="hours" class="countdown-value">00</div>
+        <div class="countdown-label">GODZIN</div>
+      </div>
+      <div class="countdown-item">
+        <div id="minutes" class="countdown-value">00</div>
+        <div class="countdown-label">MINUT</div>
+      </div>
+      <div class="countdown-item">
+        <div id="seconds" class="countdown-value">00</div>
+        <div class="countdown-label">SEKUND</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dekoracyjny kwiat SVG -->
+  <img src="images/flower01.svg" alt="kwiat dekoracyjny" class="flower-svg" />
+
+  <!-- Skrypt JS – aktualizacja licznika -->
+  <script>
+    const countdownTarget = new Date("2026-05-30T16:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countdownTarget - now;
+
+      if (distance <= 0) {
+        document.querySelector(".countdown-boxes").innerHTML = "To już dziś!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((distance / (1000 * 60)) % 60);
+      const seconds = Math.floor((distance / 1000) % 60);
+
+      document.getElementById("days").textContent = String(days).padStart(2, "0");
+      document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+
+</body>
+</html>
