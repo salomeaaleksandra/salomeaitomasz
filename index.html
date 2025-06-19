@@ -13,6 +13,17 @@
 </head>
 <body>
 
+	<nav class="top-nav">
+	  <ul>
+		<li><a href="#harmonogram">HARMONOGRAM</a></li>
+		<li><a href="#miejsce">MIEJSCE</a></li>
+		<li><a href="#rsvp">RSVP</a></li>
+		<li><a href="#charytatywne">DAROWIZNA NA CELE<br>CHARYTATYWNE</a></li>
+
+	  </ul>
+	</nav>
+
+
   <!-- Ramka w rogu -->
   <div class="corner-frame top-left"></div>
 
@@ -84,6 +95,58 @@
     updateCountdown();
     setInterval(updateCountdown, 1000);
   </script>
+	<section id="harmonogram" class="section">
+	  <h2 class="section-title">Harmonogram</h2>
+	  <div class="timeline">
+		<div class="event">
+		  <p class="event-title">Ceremonia zaślubin</p>
+		  <p class="event-time">16:00</p>
+		  <p class="event-location">Kościół św. Antoniego Padewskiego, Stara Miłosna</p>
+		</div>
+		<div class="event">
+		  <p class="event-title">Przyjęcie weselne</p>
+		  <p class="event-time">17:00</p>
+		  <p class="event-location">Patio na Wodoktach, Otwock Wielki</p>
+		</div>
+	  </div>
+	</section>
+
+	<section id="miejsce" class="places-section">
+	  <h2 class="section-title">Miejsce Ceremonii i Wesela</h2>
+	  <div class="places-container">
+		<div class="place-card">
+		  <h3>Ceremonia Ślubna</h3>
+		  <p>Kościół św. Antoniego Padewskiego<br>Borkowska 1<br>05,077 Warszawa, Stara Miłosna</p>
+		  <div class="map-container">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2444.211450320116!2d21.218081875391853!3d52.22137605829746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ed3ecba8329e5%3A0x2a51722a7fa98e89!2zS2_Fm2Npw7PFgiDFm3cuIEFudG9uaWVnbyBQYWRld3NraWVnbw!5e0!3m2!1spl!2spl!4v1750367467705!5m2!1spl!2spl"
+			width="600" 
+			height="450" 
+			style="border:0;" 
+			allowfullscreen="" 
+			loading="lazy" 
+			referrerpolicy="no-referrer-when-downgrade">
+			</iframe>
+		  </div>
+		</div>
+
+		<div class="place-card">
+		  <h3>Przyjęcie Weselne</h3>
+		  <p>Patio na Wodoktach<br>ul. Wiślana 32a<br>05-480 Otwock Wielki</p>
+		  <div class="map-container">
+			<iframe
+			  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2453.6778518715023!2d21.227571075377668!3d52.04917997098241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471929e28eed67c9%3A0x3fe3314036a4f7b8!2sDworek%20i%20Patio%20na%20Wodoktach!5e0!3m2!1spl!2spl!4v1750367590795!5m2!1spl!2spl" 
+			  width="600" 
+			  height="450"
+			  allowfullscreen=""
+			  loading="lazy"
+			  referrerpolicy="no-referrer-when-downgrade">
+			</iframe>
+		  </div>
+		</div>
+	  </div>
+	</section>
+
+
 
 </body>
 </html>

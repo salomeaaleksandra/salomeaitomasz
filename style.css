@@ -5,6 +5,19 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Nourd';
+  src: url('fonts/nourd_regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -12,14 +25,22 @@ body {
   color: #2b2b2b;
   text-align: center;
   font-family: 'Bellefair', serif;
+
+  overflow-x: hidden;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 header {
   padding: 0;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: -150px;
+  margin-left: -130px;
   margin-top: 100px;
 }
 
@@ -31,8 +52,8 @@ header {
 
 .name {
   font-family: 'Buongiorno Rastellino';
-  font-size: clamp(60px, 12vw, 180px);
-  font-weight: normal;
+  font-size: clamp(100px, 6vw, 240px);
+  
   margin: 0;
   line-height: 1;
 }
@@ -50,7 +71,7 @@ header {
   font-family: 'Buongiorno Rastellino';
   font-size: clamp(40px, 8vw, 100px);
   font-weight: normal;
-  margin: 0 clamp(8px, 1.5vw, 24px);
+  margin: 0 clamp(20px, 1.5vw, 24px);
   line-height: 1;
   z-index: 1;
 }
@@ -73,9 +94,10 @@ header {
 /* Styl kwiatka */
 .flower-svg {
   position: absolute;
-  top: 50px;
+  top: 80px;
   right: 20px;
-  width: clamp(200px, 40vw, 800px);
+  right: 0;
+  width: clamp(200px, 45vw, 800px);
   z-index: 0;
   pointer-events: none;
 }
@@ -90,7 +112,7 @@ header {
 
 .corner-frame {
   position: absolute;
-  width: clamp(100px, 50vw, 1000px);   /* szerokość rośnie proporcjonalnie */
+  width: clamp(100px, 60vw, 1000px);   /* szerokość rośnie proporcjonalnie */
   height: clamp(50px, 10vw, 200px);  /* wysokość również */
   border-top: 2px solid #2b2b2b;
   border-left: 2px solid #2b2b2b;
@@ -100,8 +122,8 @@ header {
 
 
 .top-left {
-  top: 5vw;
-  left: 25vw;
+  top: 70px;
+  left: 20vw;
 }
 
 
@@ -146,13 +168,166 @@ header {
   letter-spacing: 1px;
 }
 
+.top-nav {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.65); /* bardziej przezroczyste */
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  padding: 0.6rem 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.top-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  gap: 2rem;
+  max-width: 100%;
+}
+
+
+.top-nav a {
+  text-decoration: none;
+  font-family: var(--font-main); /* czyli Bellefair */
+  font-size: clamp(12px, 1.2vw, 18px);
+  color: var(--color-dark);
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.top-nav a:hover {
+  color: #c4a491;
+}
+
+.section {
+  padding: 5rem 2rem;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Buongiorno Rastellino';
+  font-weight: normal;
+  font-size: clamp(60px, 6vw, 140px);
+  margin-bottom: 3rem;
+  color: #2b2b2b;
+  font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
+  font-variant-ligatures: common-ligatures contextual;
+
+}
+
+.timeline {
+  position: relative;
+  margin-left: 2rem;
+  padding-left: 2rem;
+  border-left: 2px solid #aaa; /* jaśniejszy szary */
+}
+
+
+.event {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 1rem;
+}
+
+.event::before {
+  content: '';
+  position: absolute;
+  left: calc(-2rem - 6px);
+  top: 0.75em;             /* niżej względem tekstu */
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #aaa; /* ten sam kolor co linia */
+  border-radius: 50%;
+}
+
+
+
+.event-title {
+  font-family: 'Bellefair', serif;
+  font-size: clamp(20px, 3vw, 32px);
+  margin: 0 0 0.5rem 0;
+}
+
+.event-time {
+  font-family: 'Bellefair', serif;
+  font-size: clamp(16px, 2.5vw, 24px);
+  margin: 0 0 0.5rem 0;
+}
+
+.event-location {
+  font-family: 'Bellefair', serif;
+  font-size: clamp(14px, 2vw, 22px);
+  margin: 0;
+}
+
+.places-section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.places-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.place-card {
+  background-color: #fff;
+  padding: 2rem;
+  flex: 1 1 400px;
+  max-width: 500px;
+  text-align: left;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.place-card h3 {
+  font-family: 'Bellefair';
+  font-size: clamp(20px, 4vw, 36px);
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+.place-card p {
+  font-family: 'Nourd', sans-serif;
+  font-size: clamp(14px, 2vw, 18px);
+  margin-bottom: 1rem;
+  color: #2b2b2b;
+  line-height: 2;
+}
+
+.map-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+
+
+
 
 /* Responsywność na mniejszych ekranach */
 @media (max-width: 768px) {
-  header {
-    margin-left: -30px;
-    margin-top: 60px;
-  }
 
   .countdown-boxes {
     gap: 12px;
