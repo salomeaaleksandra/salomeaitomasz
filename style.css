@@ -405,7 +405,6 @@ header {
   font-size: clamp(14px, 2.4vw, 20px);
   margin-bottom: 1.5rem;
   line-height: 1.6;
-  text-transform: uppercase;
 }
 
 .donation-links {
