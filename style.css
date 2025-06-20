@@ -217,7 +217,7 @@ header {
 }
 
 .top-nav a:hover {
-  color: #c4a491;
+  color: #5b7f88;
 }
 
 .section {
@@ -370,6 +370,8 @@ header {
   font-size: clamp(16px, 2.5vw, 28px);
   margin-bottom: 2rem;
   text-align: center;
+  font-weight: normal;
+  text-shadow: 0.1px 0.1px 1px currentColor;
 }
 
 .contacts {
@@ -408,6 +410,24 @@ header {
   margin-bottom: 0.5rem;
 }
 
+.inserted-photo {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+.inserted-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  mix-blend-mode: darken;
+  opacity: 0.5; /* lub mniej, np. 0.5 */
+  filter: contrast(1.5) brightness(1.1) grayscale(10%);
+    /* Dodajemy maskę – wygaszamy dół */
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0,0,0,0.8) 65%, rgba(0,0,0,0.4) 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0,0,0,0.8) 65%, rgba(0,0,0,0.4) 80%, transparent 100%);
+
+}
 
 .donation-section {
   padding: 4rem 2rem;
