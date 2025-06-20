@@ -21,7 +21,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f9f6f3;
+  background-color: #eaf0f1;
   color: #2b2b2b;
   text-align: center;
   font-family: 'Bellefair', serif;
@@ -122,7 +122,7 @@ header {
 
 .top-left {
   top: 90px;
-  left: 20vw;
+  left: clamp(50px, 16vw, 240px);
 }
 
 
@@ -156,7 +156,7 @@ header {
 .countdown-value {
   font-size: clamp(20px, 4vw, 32px);
   font-weight: bold;
-  color: #c4a491;
+  color: #5b7f88;
 }
 
 .countdown-label {
@@ -214,7 +214,7 @@ header {
 .section-title {
   font-family: 'Buongiorno Rastellino';
   font-weight: normal;
-  font-size: clamp(100px, 6vw, 180px);
+  font-size: clamp(50px, 12vw, 180px);
   margin-bottom: 3rem;
   color: #2b2b2b;
   font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
@@ -251,20 +251,20 @@ header {
 
 
 .event-title {
-  font-family: 'Bellefair', serif;
+  font-family: 'Bellefair';
   font-size: clamp(20px, 3vw, 32px);
   margin: 0 0 0.5rem 0;
 }
 
 .event-time {
-  font-family: 'Bellefair', serif;
-  font-size: clamp(16px, 2.5vw, 24px);
+  font-family: 'Nourd', sans-serif;
+  font-size: clamp(14px, 2vw, 22px);
   margin: 0 0 0.5rem 0;
 }
 
 .event-location {
-  font-family: 'Bellefair', serif;
-  font-size: clamp(14px, 2vw, 22px);
+  font-family: 'Nourd', sans-serif;
+  font-size: clamp(12px, 1.5vw, 20px);
   margin: 0;
 }
 
@@ -297,14 +297,14 @@ header {
 
 .place-card h3 {
   font-family: 'Bellefair';
-  font-size: clamp(20px, 4vw, 36px);
+  font-size: clamp(20px, 2vw, 36px);
   margin-bottom: 1rem;
   font-weight: normal;
 }
 
 .place-card p {
   font-family: 'Nourd', sans-serif;
-  font-size: clamp(14px, 2vw, 18px);
+  font-size: clamp(12px, 1.8vw, 16px);
   margin-bottom: 1rem;
   color: #2b2b2b;
   line-height: 2;
@@ -324,6 +324,57 @@ header {
   border: 0;
 }
 
+
+.form-wrapper {
+  max-width: 700px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: clamp(1rem, 4vw, 2rem);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.donation-section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.donation-text {
+  font-size: clamp(14px, 2.4vw, 20px);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.donation-links {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: clamp(14px, 2.4vw, 20px);
+  line-height: 1.6;
+}
+
+.donation-links li em,
+.donation-links li p {
+  font-family: 'Nourd', sans-serif;
+}
+
+.donation-links a {
+  color: var(--color-dark);
+  text-decoration: underline;
+}
+
+.donation-description {
+  font-size: clamp(12px, 1.8vw, 16px);
+  line-height: 1.5;
+  margin-top: 0.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.donation-details {
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.4;
+  font-family: 'Nourd', sans-serif;
+}
 
 
 
@@ -351,6 +402,10 @@ header {
   .countdown-label {
     font-size: 9px;
   }
+  .form-wrapper {
+    max-width: 90%;
+  }
+}
 
 }
 
