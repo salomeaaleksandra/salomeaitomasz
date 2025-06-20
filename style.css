@@ -423,6 +423,10 @@ header {
   line-height: 1.6;
 }
 
+.donation-text strong {
+  text-shadow: 0 0 0.5px currentColor;
+}
+
 .donation-links {
   list-style-type: none;
   padding-left: 0;
