@@ -421,11 +421,25 @@ header {
   height: auto;
   display: block;
   mix-blend-mode: darken;
-  opacity: 0.5; /* lub mniej, np. 0.5 */
-  filter: contrast(1.5) brightness(1.1) grayscale(10%);
-    /* Dodajemy maskę – wygaszamy dół */
-  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0,0,0,0.8) 65%, rgba(0,0,0,0.4) 80%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 50%, rgba(0,0,0,0.8) 65%, rgba(0,0,0,0.4) 80%, transparent 100%);
+  opacity: 0.6; /* lub mniej, np. 0.5 */
+  filter: contrast(1.4) brightness(1.05) grayscale(20%);
+-webkit-mask-image: linear-gradient(to bottom,
+  rgba(0, 0, 0, 0) 0%,           /* całkowicie przezroczysty na samym początku */
+  rgba(0, 0, 0, 0.3) 8%,         /* lekkie zacienienie od góry */
+  rgba(0, 0, 0, 1) 15%,          /* pełna widoczność zaczyna się od 15% */
+  rgba(0, 0, 0, 1) 78%,          /* obraz widoczny do 80% wysokości */
+  rgba(0, 0, 0, 0.5) 87%,        /* delikatne przejście zaczyna się przy 90% */
+  rgba(0, 0, 0, 0.2) 92%,        /* coraz jaśniej */
+  transparent 100%);            /* całkowicie znika na dole */
+
+mask-image: linear-gradient(to bottom,
+  rgba(0, 0, 0, 0) 0%,
+  rgba(0, 0, 0, 0.3) 8%,
+  rgba(0, 0, 0, 1) 15%,
+  rgba(0, 0, 0, 1) 80%,
+  rgba(0, 0, 0, 0.5) 90%,
+  rgba(0, 0, 0, 0.2) 97%,
+  transparent 100%);
 
 }
 
