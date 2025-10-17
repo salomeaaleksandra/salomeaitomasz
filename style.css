@@ -266,6 +266,7 @@ html {
   text-align: left;
   max-width: 900px;
   margin: 0 auto;
+  margin-top: 100px;
 }
 
 .section-title {
@@ -334,8 +335,6 @@ html {
   margin: 0 auto;
   margin-top: -150px;
 }
-
-
 
 .places-container {
   display: flex;
@@ -452,8 +451,9 @@ html {
 
 .contact-name {
   font-family: 'Bellefair';
-  font-size: 1.1em;
+  font-size: clamp(25px, 3vw, 36px);
   margin-bottom: 0.5rem;
+  margin-top: -2px;
 }
 
 .inserted-photo {
