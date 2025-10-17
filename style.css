@@ -15,6 +15,14 @@
 }
 
 @font-face {
+  font-family: 'Abramo Regular';
+  src: url('fonts/Abramo Regular.woff2') format('woff2'),
+       url('fonts/Abramo Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Tan Mon Cheri';
   src: url('fonts/tan-mon-cheri.woff2') format('woff2'),
        url('fonts/tan-mon-cheri.woff') format('woff');
@@ -157,7 +165,7 @@ html {
   font-family: 'Tan Mon Cheri';
   font-size: clamp(16px, 3vw, 32px);
   letter-spacing: 5px;
-  margin-top: 10px;
+  margin-top: 5px;
   line-height: 2;
   color: #5b7f88;
 }
@@ -244,7 +252,7 @@ html {
   padding: 0;
   width: 100%;
   max-width: 1600px; /* keep nice bounds on ultrawide screens */
-  gap: clamp(0.4rem, 10vw, 10rem);
+  gap: clamp(0.8rem, 9vw, 10rem);
   transition: gap 0.4s ease; /* smooth animation when resizing */
 }
 
@@ -396,7 +404,7 @@ html {
 
 .rsvp-subtitle {
   font-family: 'Tan Mon Cheri';
-  font-size: clamp(14px, 2.4vw, 20px);
+  font-size: clamp(12px, 2.4vw, 20px);
   line-height: 1.6;
   letter-spacing: 7px;
   margin: -70px 0 1.5rem 0; /* shorthand for top/right/bottom/left */
