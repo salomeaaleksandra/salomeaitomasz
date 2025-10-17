@@ -26,22 +26,32 @@
 	</nav>
 
 
-  <!-- Ramka w rogu -->
-  <div class="corner-frame top-left"></div>
+	<!--
+	<header class="names-section">
+	  <div class="v-line"></div>
+	  <div class="diagonal-names">
+		<span class="name first-name">Salomea</span>
+		<span class="amp">&amp;</span>
+		<span class="name second-name">Tomasz</span>
+	  </div>
+	</header>
+	-->
+	
+	<header class="names-header">
+	  <div class="names-wrap">
+		<h1 class="names">
+		  <span class="first-name">Salomea</span>
+		  <span class="ampersand">&amp;</span>
+		  <span class="second-name">Tomasz</span>
+		</h1>
+	  </div>
+	</header>
 
-  <!-- Imiona -->
-  <header>
-    <div class="diagonal-names">
-      <span class="name first-name">Salomea</span>
-      <span class="amp">&amp;</span>
-      <span class="name second-name">Tomasz</span>
-    </div>
-  </header>
 
   <!-- Tekst pod imionami -->
   <section class="intro">
     <p class="subtitle">ROZPOCZNĄ WSPÓLNĄ DROGĘ ŻYCIA,<br>ZAWIERAJĄC ZWIĄZEK MAŁŻEŃSKI.</p>
-    <p class="date">30 MAJA 2026 ROKU O GODZ. 16:00</p>
+    <p class="date">30 MAJA 2026 ROKU<br>O GODZ. 16:00</p>
   </section>
 
   <!-- Licznik -->
@@ -68,7 +78,7 @@
   </section>
 
   <!-- Dekoracyjny kwiat SVG -->
-  <img src="images/flower01.svg" alt="kwiat dekoracyjny" class="flower-svg" />
+  <!--<img src="images/flower01.svg" alt="kwiat dekoracyjny" class="flower-svg" />-->
 
   <!-- Skrypt JS – aktualizacja licznika -->
   <script>
@@ -114,11 +124,11 @@
 	</section>
 
 	<section id="miejsce" class="places-section">
-	  <h2 class="section-title">Miejsce Ceremonii<br>i Wesela</h2>
+	  <h2 class="section-title">Miejsce Ceremonii i Wesela</h2>
 	  <div class="places-container">
 		<div class="place-card">
 		  <h3>Ceremonia Ślubna</h3>
-		  <p><strong>Kościół św. Antoniego Padewskiego</strong><br>ul. Borkowska 1<br>05-077 Warszawa, Stara Miłosna</p>
+		  <p><span class="highlighted">Kościół św. Antoniego Padewskiego</span><br>ul. Borkowska 1<br>05-077 Warszawa, Stara Miłosna</p>
 		  <div class="map-container">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2444.211450320116!2d21.218081875391853!3d52.22137605829746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ed3ecba8329e5%3A0x2a51722a7fa98e89!2zS2_Fm2Npw7PFgiDFm3cuIEFudG9uaWVnbyBQYWRld3NraWVnbw!5e0!3m2!1spl!2spl!4v1750367467705!5m2!1spl!2spl"
 			width="600" 
@@ -133,7 +143,7 @@
 
 		<div class="place-card">
 		  <h3>Przyjęcie Weselne</h3>
-		  <p><strong>Patio na Wodoktach</strong><br>ul. Wiślana 32a<br>05-480 Otwock Wielki</p>
+		  <p><span class="highlighted">Patio na Wodoktach</span><br>ul. Wiślana 32a<br>05-480 Otwock Wielki</p>
 		  <div class="map-container">
 			<iframe
 			  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2453.6778518715023!2d21.227571075377668!3d52.04917997098241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471929e28eed67c9%3A0x3fe3314036a4f7b8!2sDworek%20i%20Patio%20na%20Wodoktach!5e0!3m2!1spl!2spl!4v1750367590795!5m2!1spl!2spl" 
@@ -161,12 +171,12 @@
 		  <h3 class="section-subtitle">DANE KONTAKTOWE</h3>
 		  <div class="contacts">
 			<div class="contact-box box-style">
-			  <p class="contact-name">Salomea</p>
+			  <p class="contact-name"><span class="highlighted">Salomea</span></p>
 			  <p><span class="material-symbols-outlined">call</span> +48 604 446 630</p>
 			  <p><span class="material-symbols-outlined">mail</span> salomea.grodzicka@gmail.com</p>
 			</div>
 			<div class="contact-box box-style">
-			  <p class="contact-name">Tomasz</p>
+			  <p class="contact-name"><span class="highlighted">Tomasz</span></p>
 			  <p><span class="material-symbols-outlined">call</span> +48 500 149 899</p>
 			  <p><span class="material-symbols-outlined">mail</span> tprzedlacki@gmail.com</p>
 			</div>
@@ -221,8 +231,6 @@
 			  lub innej wybranej przez Was inicjatywy...
 			</p>
 		</ul>
-		
-		<div class="corner-frame-mirror bottom-right"></div>
 
 	</section>
 	

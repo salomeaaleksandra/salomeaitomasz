@@ -1,13 +1,23 @@
 @font-face {
-  font-family: 'Buongiorno Rastellino';
-  src: url('fonts/Buongiorno Rastellino.otf') format('opentype');
+  font-family: 'Nourd';
+  src: url('fonts/nourd_regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Abramo Script';
+  src: url('fonts/Abramo Script.woff2') format('woff2'),
+       url('fonts/Abramo Script.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Nourd';
-  src: url('fonts/nourd_regular.ttf') format('truetype');
+  font-family: 'Tan Mon Cheri';
+  src: url('fonts/tan-mon-cheri.woff2') format('woff2'),
+       url('fonts/tan-mon-cheri.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -50,60 +60,89 @@ html {
 }
 
 
-header {
-  padding: 0;
-  padding-top: 20px;
+
+.names {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-left: clamp(-240px, -15vw, -140px);
-  margin-top: 100px;
-}
-
-.diagonal-names {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.name {
-  font-family: 'Buongiorno Rastellino';
-  font-size: clamp(90px, 16vw, 250px);
-  margin: 0;
+  color: #2b2b2b;
   line-height: 1;
 }
 
-.first-name {
-  margin-bottom: clamp(-10px, -3vw, -30px);
-}
-
-.second-name {
-  margin-top: clamp(-10px, -3vw, -30px);
-  margin-left: clamp(12px, 3vw, 40px);
-}
-
-.amp {
-  font-family: 'Buongiorno Rastellino';
-  font-size: clamp(40px, 8vw, 100px);
+/* Names use Abramo Script */
+.names .first-name {
+  font-family: 'Abramo Script', serif;
+  font-size: 120px;
+  color: #5b7f88;
   font-weight: normal;
-  margin: 0 clamp(20px, 1.5vw, 24px);
-  line-height: 1;
-  z-index: 1;
 }
+
+.names .second-name {
+  font-family: 'Abramo Script', serif;
+  font-size: 120px;
+  color: #5b7f88;
+  font-weight: normal;
+  margin-left: 75px;
+  margin-top: -60px;
+}
+
+/* & symbol uses Tan Mon Cheri */
+.names .ampersand {
+  font-family: 'Tan Mon Cheri', serif;
+  font-size: 40px;
+  margin-left: 50px;
+  margin-top: -8px;
+  color: #2b2b2b;
+}
+
+/* --- Responsive scaling and horizontal shift --- */
+
+.names-header {
+  position: relative;
+  text-align: left;
+  margin-top: 120px;
+  margin-left: var(--nameShift);
+
+  /* Reserve or remove space depending on scale:
+     - scale < 1 → negative margin pulls next section up (removes extra gap)
+     - scale > 1 → positive margin pushes next section down (adds needed room) */
+  --nameBaseH: 260px; /* tweak 240–300px until it’s perfect for your base size */
+  margin-bottom: calc( (var(--nameScale) - 1) * var(--nameBaseH) );
+}
+
+
+.names-wrap {
+  transform-origin: top left;
+  transform: scale(var(--nameScale));
+  transition: transform 0.35s ease;
+}
+
+/* position: as you wanted */
+:root {
+  --nameShift: clamp(40px, 18vw, 360px);
+  --nameScale: 0.8;            /* base (your current look) */
+}
+
+/* start enlarging earlier and faster */
+@media (min-width: 800px)   { :root { --nameScale: 1; } }
+@media (min-width: 1000px)  { :root { --nameScale: 1.2; } }
+@media (min-width: 1200px)  { :root { --nameScale: 1.4; } }
+
 
 
 .subtitle {
   font-size: clamp(11px, 2vw, 24px);
-  margin-top: 30px;
   max-width: 500px;
   line-height: 2;
+  margin-top: clamp(-20px, -5vw, -150px);
 }
 
 .date {
-  font-size: clamp(9px, 1.6vw, 18px);
+  font-family: 'Tan Mon Cheri';
+  font-size: clamp(12px, 3vw, 30px);
   letter-spacing: 1px;
   margin-top: 10px;
   line-height: 2;
+  color: #5b7f88;
 }
 
 /* Styl kwiatka */
@@ -122,25 +161,8 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 40px;
+  margin-top: -5px;
 }
-
-.corner-frame {
-  position: absolute;
-  width: clamp(100px, 60vw, 1000px);   /* szerokość rośnie proporcjonalnie */
-  height: clamp(50px, 10vw, 200px);  /* wysokość również */
-  border-top: clamp(0.7px, 0.3vw, 3px) solid #2b2b2b;
-  border-left: clamp(0.7px, 0.3vw, 3px) solid #2b2b2b;
-  z-index: 1;
-  pointer-events: none;
-}
-
-
-.top-left {
-  top: 90px;
-  left: clamp(50px, 16vw, 240px);
-}
-
 
 .countdown {
   margin-top: 60px;
@@ -170,7 +192,8 @@ header {
 }
 
 .countdown-value {
-  font-size: clamp(20px, 4vw, 32px);
+  font-family: 'Tan Mon Cheri';
+  font-size: clamp(15px, 2vw, 30px);
   font-weight: bold;
   color: #5b7f88;
 }
@@ -202,10 +225,11 @@ header {
   list-style: none;
   margin: 0 auto;
   padding: 0;
-  gap: 2rem;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1600px; /* keep nice bounds on ultrawide screens */
+  gap: clamp(1rem, 10vw, 20rem); /* wider scaling range */
+  transition: gap 0.4s ease; /* smooth animation when resizing */
 }
-
 
 .top-nav a {
   text-decoration: none;
@@ -228,11 +252,11 @@ header {
 }
 
 .section-title {
-  font-family: 'Buongiorno Rastellino';
+  font-family: 'Abramo Script';
   text-align: left;
   margin: 0 auto;
   font-weight: normal;
-  font-size: clamp(50px, 12vw, 180px);
+  font-size: clamp(30px, 10vw, 100px);
   margin-bottom: 3rem;
   color: #2b2b2b;
   font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
@@ -275,7 +299,7 @@ header {
 }
 
 .event-time {
-  font-family: 'Nourd', sans-serif;
+  font-family: 'Tan Mon Cheri';	
   font-size: clamp(14px, 2vw, 22px);
   margin: 0 0 0.5rem 0;
 }
@@ -314,14 +338,14 @@ header {
 }
 
 .place-card h3 {
-  font-family: 'Bellefair';
+  font-family: 'Tan Mon Cheri';
   font-size: clamp(20px, 2vw, 36px);
   margin-bottom: 1rem;
   font-weight: normal;
 }
 
 .place-card p {
-  font-family: 'Nourd', sans-serif;
+  font-family: 'Bellefair';
   font-size: clamp(12px, 1.8vw, 16px);
   margin-bottom: 1rem;
   color: #2b2b2b;
@@ -366,7 +390,7 @@ header {
 }
 
 .section-subtitle {
-  font-family: var(--font-main);
+  font-family: 'Tan Mon Cheri';
   font-size: clamp(16px, 2.5vw, 28px);
   margin-bottom: 2rem;
   text-align: center;
@@ -405,7 +429,7 @@ header {
 }
 
 .contact-name {
-  font-weight: bold;
+  font-family: 'Bellefair';
   font-size: 1.1em;
   margin-bottom: 0.5rem;
 }
@@ -491,23 +515,6 @@ mask-image: linear-gradient(to bottom,
   line-height: 1.4;
   font-family: 'Nourd', sans-serif;
 }
-
-.corner-frame-mirror {
-  position: absolute;
-  width: clamp(50px, 20vw, 400px);
-  height: clamp(100px, 35vw, 500px);
-  border-bottom: clamp(0.7px, 0.3vw, 3px) solid #2b2b2b;
-  border-right: clamp(0.7px, 0.3vw, 3px) solid #2b2b2b;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.bottom-right {
-  top: calc(100% - clamp(100px, 35vw, 500px) - 70px);
-  right: clamp(15px, 1vw, 0px);
-}
-
-
 
 
 /* Responsywność na mniejszych ekranach */
