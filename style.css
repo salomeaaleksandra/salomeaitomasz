@@ -397,20 +397,18 @@ html {
 .rsvp-subtitle {
   font-family: 'Tan Mon Cheri';
   font-size: clamp(14px, 2.4vw, 20px);
-  margin-bottom: 1.5rem;
   line-height: 1.6;
-  margin-top: -1rem;
   letter-spacing: 7px;
+  margin: -70px 0 1.5rem 0; /* shorthand for top/right/bottom/left */
+  display: inline-block;     /* allows top margin without forcing a break */
+  text-align: center;        /* optional, looks nice if centered */
 }
 
-.rsvp-date {
+.rsvp-subtitle .rsvp-date {
   font-family: 'Tan Mon Cheri';
   font-size: clamp(16px, 2.4vw, 24px);
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  margin-top: -1rem;
-  letter-spacing: 7px;
   color: #5b7f88;
+  text-shadow: 0.1px 0.1px 1px currentColor;
 }
 
 
