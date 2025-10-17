@@ -92,6 +92,7 @@ html {
   margin-left: 50px;
   margin-top: -8px;
   color: #2b2b2b;
+  opacity: 0.9
 }
 
 /* --- Responsive scaling and horizontal shift --- */
@@ -116,6 +117,21 @@ html {
   transition: transform 0.35s ease;
 }
 
+
+/* vertical decorative line */
+.v-line {
+  position: absolute;
+  top: -10px;       /* starts near the top of page */
+  left: clamp(-15px, -1vw, -40px);      /* aligns with names */
+  height: clamp(180px, 35vw, 500px);   /* length increases smoothly */
+  border-left: clamp(2px, 0.25vw, 4px) solid #2b2b2b;  /* constant-ish width */
+  opacity: 0.9;
+  z-index: 1;
+  pointer-events: none;
+  transition: left 0.4s ease, height 0.4s ease;
+}
+
+
 /* position: as you wanted */
 :root {
   --nameShift: clamp(40px, 18vw, 360px);
@@ -130,16 +146,17 @@ html {
 
 
 .subtitle {
-  font-size: clamp(11px, 2vw, 24px);
+  font-size: clamp(13px, 2vw, 24px);
   max-width: 500px;
   line-height: 2;
   margin-top: clamp(-20px, -5vw, -150px);
+  letter-spacing: 1px;
 }
 
 .date {
   font-family: 'Tan Mon Cheri';
-  font-size: clamp(12px, 3vw, 30px);
-  letter-spacing: 1px;
+  font-size: clamp(16px, 3vw, 32px);
+  letter-spacing: 5px;
   margin-top: 10px;
   line-height: 2;
   color: #5b7f88;
@@ -165,7 +182,7 @@ html {
 }
 
 .countdown {
-  margin-top: 60px;
+  margin-top: 70px;
   text-align: center;
 }
 
@@ -199,10 +216,10 @@ html {
 }
 
 .countdown-label {
-  font-size: 12px;
+  font-size: 18px;
   font-weight: normal;
   color: #2b2b2b;
-  margin-top: 4px;
+  margin-top: 10px;
   letter-spacing: 1px;
 }
 
@@ -261,6 +278,7 @@ html {
   color: #2b2b2b;
   font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
   font-variant-ligatures: common-ligatures contextual;
+  margin-top: -100px;
 
 }
 
@@ -293,13 +311,13 @@ html {
 
 
 .event-title {
-  font-family: 'Bellefair';
+  font-family: 'Tan Mon Cheri';
   font-size: clamp(20px, 3vw, 32px);
   margin: 0 0 0.5rem 0;
 }
 
-.event-time {
-  font-family: 'Tan Mon Cheri';	
+.event-time {	
+  font-family: 'Bellefair';
   font-size: clamp(14px, 2vw, 22px);
   margin: 0 0 0.5rem 0;
 }
@@ -438,6 +456,7 @@ html {
   display: flex;
   justify-content: center;
   margin: 4rem 0;
+  margin-top: -10rem;
 }
 
 .inserted-photo img {
@@ -473,6 +492,7 @@ mask-image: linear-gradient(to bottom,
   margin: 0 auto;
   text-align: left;
   position: relative;
+  margin-top: -10rem;
 }
 
 .donation-text {
