@@ -82,6 +82,7 @@ html {
   font-size: 120px;
   color: #5b7f88;
   font-weight: normal;
+  margin-left: 25px;
 }
 
 .names .second-name {
@@ -89,7 +90,7 @@ html {
   font-size: 120px;
   color: #5b7f88;
   font-weight: normal;
-  margin-left: 75px;
+  margin-left: 100px;
   margin-top: -60px;
 }
 
@@ -97,7 +98,7 @@ html {
 .names .ampersand {
   font-family: 'Tan Mon Cheri', serif;
   font-size: 40px;
-  margin-left: 50px;
+  margin-left: 75px;
   margin-top: -8px;
   color: #a6a6a6
 }
@@ -141,7 +142,7 @@ html {
 
 /* position: as you wanted */
 :root {
-  --nameShift: clamp(40px, 18vw, 360px);
+  --nameShift: clamp(40px, 18vw, 600px);
   --nameScale: 0.8;            /* base (your current look) */
 }
 
