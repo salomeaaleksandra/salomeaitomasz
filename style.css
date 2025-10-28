@@ -99,8 +99,7 @@ html {
   font-size: 40px;
   margin-left: 50px;
   margin-top: -8px;
-  color: #2b2b2b;
-  opacity: 0.9
+  color: #a6a6a6
 }
 
 /* --- Responsive scaling and horizontal shift --- */
@@ -164,6 +163,7 @@ html {
 .date {
   font-family: 'Tan Mon Cheri';
   font-size: clamp(16px, 3vw, 32px);
+  text-align: center;
   letter-spacing: 5px;
   margin-top: 5px;
   line-height: 2;
@@ -275,6 +275,7 @@ html {
   max-width: 900px;
   margin: 0 auto;
   margin-top: 100px;
+  margin-bottom: -50px;
 }
 
 .section-title {
@@ -282,59 +283,35 @@ html {
   text-align: left;
   margin: 0 auto;
   font-weight: normal;
-  font-size: clamp(30px, 10vw, 100px);
+  font-size: clamp(40px, 10vw, 110px);
   margin-bottom: 3rem;
   color: #2b2b2b;
   font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
   font-variant-ligatures: common-ligatures contextual;
 }
 
-.timeline {
-  position: relative;
-  margin-left: 2rem;
-  padding-left: 2rem;
-  border-left: 2px solid #aaa; /* jaśniejszy szary */
-  margin-top: -70px;
+.places-intro-v1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: clamp(14px, 2.5vw, 28px);
+  max-width: 800px;
+  line-height: 2;
+  letter-spacing: 1px;
 }
 
-
-.event {
-  position: relative;
-  margin-bottom: 3rem;
-  padding-left: 1rem;
-}
-
-.event::before {
-  content: '';
-  position: absolute;
-  left: calc(-2rem - 6px);
-  top: 0.75em;             /* niżej względem tekstu */
-  transform: translateY(-50%);
-  width: 10px;
-  height: 10px;
-  background-color: #aaa; /* ten sam kolor co linia */
-  border-radius: 50%;
-}
-
-.event-title {
+.places-intro-v2 {
   font-family: 'Tan Mon Cheri';
-  font-size: clamp(20px, 3vw, 32px);
-  margin: 0 0 0.5rem 0;
-  letter-spacing: 10px;
-}
-
-.event-time {	
-  font-family: 'Bellefair';
-  font-size: clamp(14px, 2vw, 22px);
-  margin: 0 0 0.5rem 0;
-  letter-spacing: 2px;
-}
-
-.event-location {
-  font-family: 'Nourd', sans-serif;
-  font-size: clamp(12px, 1.5vw, 20px);
-  margin: 0;
-  letter-spacing: 2px;
+  font-size: clamp(18px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  line-height: 2;
+  letter-spacing: 1px;
+  margin-top: -3rem;
 }
 
 .places-section {
@@ -342,7 +319,6 @@ html {
   padding: 5rem 2rem;
   max-width: 900px;
   margin: 0 auto;
-  margin-top: -100px;
 }
 
 .places-container {
@@ -352,14 +328,13 @@ html {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: -70px;
 }
 
 .place-card {
   background-color: #fff;
   padding: 2rem;
   flex: 1 1 400px;
-  max-width: 500px;
+  max-width: 800px;
   text-align: left;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
   letter-spacing: 2px;
@@ -367,7 +342,7 @@ html {
 
 .place-card h3 {
   font-family: 'Tan Mon Cheri';
-  font-size: clamp(20px, 2vw, 36px);
+  font-size: clamp(15px, 2vw, 28px);
   margin-bottom: 1rem;
   font-weight: normal;
   letter-spacing: 10px;
@@ -375,7 +350,7 @@ html {
 
 .place-card p {
   font-family: 'Bellefair';
-  font-size: clamp(12px, 1.8vw, 16px);
+  font-size: clamp(14px, 1.8vw, 18px);
   margin-bottom: 1rem;
   color: #2b2b2b;
   line-height: 2;
@@ -400,32 +375,6 @@ html {
   text-align: left;
   max-width: 900px;
   margin: 0 auto;
-}
-
-.rsvp-subtitle {
-  font-family: 'Tan Mon Cheri';
-  font-size: clamp(12px, 2.4vw, 20px);
-  line-height: 1.6;
-  letter-spacing: 7px;
-  margin: -70px 0 1.5rem 0; /* shorthand for top/right/bottom/left */
-  display: inline-block;     /* allows top margin without forcing a break */
-  text-align: center;        /* optional, looks nice if centered */
-}
-
-.rsvp-subtitle .rsvp-date {
-  font-family: 'Tan Mon Cheri';
-  font-size: clamp(16px, 2.4vw, 24px);
-  color: #5b7f88;
-  text-shadow: 0.1px 0.1px 1px currentColor;
-}
-
-
-.form-wrapper {
-  max-width: 700px;
-  margin: 2rem auto;
-  background-color: #fff;
-  padding: clamp(1rem, 4vw, 2rem);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .contact-section {
@@ -459,6 +408,7 @@ html {
   font-family: 'Nourd', sans-serif;
   font-size: clamp(14px, 2vw, 18px);
   line-height: 1.6;
+  margin-top: -3rem;
 }
 
 .box-style {
@@ -477,8 +427,11 @@ html {
 }
 
 .contact-name {
-  font-family: 'Bellefair';
-  font-size: clamp(25px, 3vw, 36px);
+  font-family: 'Tan Mon Cheri';
+  font-size: clamp(15px, 2vw, 28px);
+  margin-bottom: 1rem;
+  font-weight: normal;
+  letter-spacing: 10px;
   margin-bottom: 0.5rem;
   margin-top: -2px;
 }
@@ -536,6 +489,13 @@ mask-image: linear-gradient(to bottom,
 }
 
 .donation-text {
+  font-size: clamp(14px, 2.4vw, 20px);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  margin-top: -3rem;
+}
+
+.donation-text-bottom {
   font-size: clamp(14px, 2.4vw, 20px);
   margin-bottom: 1.5rem;
   line-height: 1.6;
