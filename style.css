@@ -90,6 +90,7 @@ html {
   color: #5b7f88;
   font-weight: normal;
   margin-left: 25px;
+  z-index: 2;
 }
 
 .names .second-name {
@@ -99,6 +100,7 @@ html {
   font-weight: normal;
   margin-left: 100px;
   margin-top: -60px;
+  z-index: 2;
 }
 
 /* & symbol uses Tan Mon Cheri */
@@ -107,7 +109,8 @@ html {
   font-size: 40px;
   margin-left: 75px;
   margin-top: -8px;
-  color: #a6a6a6
+  color: #a6a6a6;
+  z-index: 1;
 }
 
 .initial {
@@ -283,7 +286,7 @@ html {
   text-align: left;
   max-width: 900px;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: -10rem;
 }
 
 .section-title {
@@ -351,7 +354,7 @@ html {
   padding: 5rem 2rem;
   max-width: 900px;
   margin: 0 auto;
-  margin-top: -150px;
+  /*margin-top: -150px;*/
 }
 
 .places-container {
