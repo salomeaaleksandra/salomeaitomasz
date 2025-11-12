@@ -285,6 +285,7 @@ html {
   padding: 5rem 2rem;
   text-align: left;
   max-width: 900px;
+  line-height: 0.5;
   margin: 0 auto;
   margin-top: -10rem;
 }
@@ -330,7 +331,7 @@ html {
 
 .event-title {
   font-family: 'Tan Mon Cheri';
-  font-size: clamp(15px, 3vw, 32px);
+  font-size: clamp(12px, 3vw, 32px);
   margin: 0 0 0.5rem 0;
   letter-spacing: 10px;
 }
