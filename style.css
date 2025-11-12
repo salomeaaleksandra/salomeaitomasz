@@ -287,7 +287,7 @@ html {
   max-width: 900px;
   line-height: 0.5;
   margin: 0 auto;
-  margin-top: -10rem;
+  margin-top: -8rem;
 }
 
 .section-title {
@@ -296,24 +296,25 @@ html {
   margin: 0 auto;
   font-weight: normal;
   font-size: clamp(50px, 11vw, 110px);
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   color: #2b2b2b;
   font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
   font-variant-ligatures: common-ligatures contextual;
+  line-height: 0.8;
 }
 
 .timeline {
   position: relative;
   margin-left: 2rem;
   padding-left: 2rem;
-  border-left: 2px solid #aaa; /* jaśniejszy szary */
-  margin-top: -70px;
+  border-left: 2px solid #aaa; /* jaśniejszy szary 
+  margin-top: -70px; */
 }
 
 
 .event {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   padding-left: 1rem;
 }
 
@@ -331,7 +332,7 @@ html {
 
 .event-title {
   font-family: 'Tan Mon Cheri';
-  font-size: clamp(12px, 3vw, 32px);
+  font-size: clamp(12px, 2vw, 28px);
   margin: 0 0 0.5rem 0;
   letter-spacing: 10px;
 }
@@ -339,15 +340,16 @@ html {
 .event-time {	
   font-family: 'Bellefair';
   font-size: clamp(14px, 2vw, 22px);
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 1 rem 0;
   letter-spacing: 2px;
 }
 
 .event-location {
   font-family: 'Nourd', sans-serif;
   font-size: clamp(12px, 1.5vw, 20px);
-  margin: 0;
+  margin: 0 0 1.5rem 0; /* lekki odstęp na dole */
   letter-spacing: 2px;
+  line-height: 1.2;
 }
 
 .places-section {
@@ -355,7 +357,7 @@ html {
   padding: 5rem 2rem;
   max-width: 900px;
   margin: 0 auto;
-  /*margin-top: -150px;*/
+  margin-top: -4rem;
 }
 
 .places-container {
@@ -365,7 +367,6 @@ html {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: -70px;
 }
 
 .place-card {
@@ -536,7 +537,7 @@ mask-image: linear-gradient(to bottom,
   margin: 0 auto;
   text-align: left;
   position: relative;
-  margin-top: -10rem;
+  margin-top: -7rem;
 }
 
 .donation-intro {
