@@ -300,7 +300,7 @@ html {
   color: #2b2b2b;
   font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
   font-variant-ligatures: common-ligatures contextual;
-  line-height: 0.8;
+  line-height: 0.9;
 }
 
 .timeline {
@@ -335,6 +335,7 @@ html {
   font-size: clamp(12px, 2vw, 28px);
   margin: 0 0 0.5rem 0;
   letter-spacing: 10px;
+  line-height: 1.2;
 }
 
 .event-time {	
