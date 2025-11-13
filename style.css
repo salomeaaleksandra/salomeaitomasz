@@ -447,7 +447,7 @@ html {
   padding: 4rem 2rem;
   max-width: 900px;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
   margin-top: -70px;
 }
 
@@ -465,6 +465,7 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  text-align: left;
   align-items: stretch; /* ensures equal heights */
 }
 
@@ -594,6 +595,7 @@ mask-image: linear-gradient(to bottom,
 /* Responsywność na mniejszych ekranach */
 @media (max-width: 768px) {
 
+  /* countdown */
   .countdown-boxes {
     gap: 12px;
     margin-top: 20px;
@@ -613,10 +615,18 @@ mask-image: linear-gradient(to bottom,
   .countdown-label {
     font-size: 9px;
   }
+
+  /* form */
   .form-wrapper {
     max-width: 90%;
   }
-}
 
-}
+  /* navigation */
+  .top-nav {
+    padding: 0.3rem 0.8rem;
+  }
 
+  .top-nav ul {
+    gap: 0.6rem;
+  }
+}
