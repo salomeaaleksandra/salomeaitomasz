@@ -637,7 +637,12 @@ mask-image: linear-gradient(to bottom,
   }
   
   .contact-section {
-    padding: 3rem 1rem;
+    padding: 3rem 0.8rem;
+  }
+  
+  .contact-box {
+    max-width: 200px;
+    margin: 0 auto;
   }
 }
 
