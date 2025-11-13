@@ -636,13 +636,8 @@ mask-image: linear-gradient(to bottom,
     letter-spacing: clamp(3px, 1vw, 6px);
   }
   
-  .contacts {
-    justify-items: center;   /* centers grid items */
-  }
-
-  .contact-box {
-    width: 92%;              /* makes it wider but not full width */
-    max-width: 320px;        /* perfect for phones */
+  .contact-section {
+    padding: 3rem 1rem;
   }
 }
 
