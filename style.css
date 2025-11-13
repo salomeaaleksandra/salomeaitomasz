@@ -635,5 +635,14 @@ mask-image: linear-gradient(to bottom,
   .section-subtitle {
     letter-spacing: clamp(3px, 1vw, 6px);
   }
+  
+  .contact-box {
+    max-width: 320px;   /* sweet spot for mobile */
+    margin: 0 auto;     /* center the box */
+  }
+
+  .contacts {
+    grid-template-columns: 1fr;  /* force single column */
+  }
 }
 
