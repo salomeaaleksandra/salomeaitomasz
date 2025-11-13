@@ -463,7 +463,7 @@ html {
 
 .contacts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   text-align: left;
   align-items: stretch; /* ensures equal heights */
@@ -630,3 +630,10 @@ mask-image: linear-gradient(to bottom,
     gap: 0.6rem;
   }
 }
+
+@media (max-width: 480px) {
+  .section-subtitle {
+    letter-spacing: clamp(3px, 1vw, 6px);
+  }
+}
+
