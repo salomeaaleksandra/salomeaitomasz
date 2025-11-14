@@ -447,9 +447,10 @@ html {
   padding: 4rem 2rem;
   max-width: 900px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;   /* jak w short */
   margin-top: -70px;
 }
+
 
 .section-subtitle {
   font-family: 'Tan Mon Cheri';
@@ -466,6 +467,7 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   align-items: stretch; /* ensures equal heights */
+  text-align: left;
 }
 
 .contact-box {
@@ -493,11 +495,11 @@ html {
 }
 
 .contact-name {
-  font-family: 'Tan Mon Cheri';
-  font-size: clamp(15px, 2vw, 28px);
+  font-family: 'Bellefair';
+  font-size: clamp(20px, 2vw, 32px);
   margin-bottom: 1rem;
   font-weight: normal;
-  letter-spacing: 10px;
+  letter-spacing: 2px;
   margin-bottom: 0.5rem;
   margin-top: -2px;
 }
