@@ -493,11 +493,11 @@ html {
 }
 
 .contact-name {
-  font-family: 'Bellefair';
-  font-size: clamp(25px, 2vw, 32px);
+  font-family: 'Tan Mon Cheri';
+  font-size: clamp(15px, 2vw, 28px);
   margin-bottom: 1rem;
   font-weight: normal;
-  letter-spacing: 3px;
+  letter-spacing: 10px;
   margin-bottom: 0.5rem;
   margin-top: -2px;
 }
