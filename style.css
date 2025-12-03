@@ -3,7 +3,7 @@
   src: url('fonts/nourd_regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
+} 
 
 
 @font-face {
@@ -31,9 +31,37 @@
 
 @font-face {
   font-family: 'Tan Mon Cheri';
-  src: url('fonts/tan-mon-cheri.woff2') format('woff2'),
-       url('fonts/tan-mon-cheri.woff') format('woff');
+  src: url('fonts/tan-mon-cheri.ttf') format('truetype');
   font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('fonts/EBGaramond-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('fonts/EBGaramond-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('fonts/EBGaramond-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('fonts/EBGaramond-Bold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -54,10 +82,8 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smooth: always;
-  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
 }
-
-
 
 body {
   margin: 0;
@@ -65,7 +91,7 @@ body {
   background-color: #eaf0f1;
   color: #2b2b2b;
   text-align: center;
-  font-family: 'Bellefair', serif;
+  font-family: 'EB Garamond', serif;
 
   overflow-x: hidden;
 }
@@ -98,20 +124,22 @@ html {
   font-size: 120px;
   color: #5b7f88;
   font-weight: normal;
-  margin-left: 100px;
+  margin-left: 110px;
   margin-top: -60px;
   z-index: 2;
 }
 
 /* & symbol uses Tan Mon Cheri */
 .names .ampersand {
-  font-family: 'Tan Mon Cheri', serif;
-  font-size: 40px;
+  font-family: 'Tan Mon Cheri';
+  font-size: 50px;
   margin-left: 75px;
   margin-top: -8px;
-  color: #a6a6a6;
+  color: #C5C6C6;
   z-index: 1;
+  font-weight: 100; 
 }
+
 
 .initial {
   font-family: 'Haigrast Script';
@@ -176,10 +204,10 @@ html {
 
 .subtitle {
   font-size: clamp(13px, 2vw, 24px);
-  max-width: 500px;
+  max-width: 550px;
   line-height: 2;
   margin-top: clamp(-20px, -5vw, -150px);
-  letter-spacing: 1px;
+  letter-spacing: clamp(1.2px, 0.5vw, 3.2px);
 }
 
 .date {
@@ -197,6 +225,7 @@ html {
   align-items: center;
   text-align: center;
   margin-top: -5px;
+  letter-spacing: 2px;
 }
 
 .countdown {
@@ -236,7 +265,7 @@ html {
 }
 
 .countdown-label {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: normal;
   color: #2b2b2b;
   margin-top: 10px;
@@ -339,7 +368,7 @@ html {
 }
 
 .event-time {	
-  font-family: 'Bellefair';
+  font-family: 'EB Garamond';
   font-size: clamp(14px, 2vw, 22px);
   margin: 0 0 1 rem 0;
   letter-spacing: 2px;
@@ -389,7 +418,7 @@ html {
 }
 
 .place-card p {
-  font-family: 'Bellefair';
+  font-family: 'EB Garamond';
   font-size: clamp(12px, 1.8vw, 16px);
   margin-bottom: 1rem;
   color: #2b2b2b;
@@ -495,7 +524,7 @@ html {
 }
 
 .contact-name {
-  font-family: 'Bellefair';
+  font-family: 'EB Garamond';
   font-size: clamp(20px, 2vw, 32px);
   margin-bottom: 1rem;
   font-weight: normal;
@@ -619,7 +648,7 @@ mask-image: linear-gradient(to bottom,
   }
 
   .countdown-label {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   /* form */
