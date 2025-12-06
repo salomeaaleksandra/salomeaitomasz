@@ -458,7 +458,7 @@ html {
 
 .rsvp-subtitle .rsvp-date {
   font-family: 'Tan Mon Cheri';
-  font-size: clamp(16px, 2.4vw, 24px);
+  font-size: clamp(14px, 2.4vw, 24px);
   color: #5b7f88;
   text-shadow: 0.1px 0.1px 1px currentColor;
 }
