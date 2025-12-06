@@ -452,7 +452,7 @@ html {
   line-height: 1.6;
   letter-spacing: 7px;
   /*margin: 0 0 1.5rem 1.5rem;  shorthand for top/right/bottom/left */
-  display: inline-block;     /* allows top margin without forcing a break */
+  /*display: inline-block;      allows top margin without forcing a break */
   text-align: center;        /* optional, looks nice if centered */
 }
 
